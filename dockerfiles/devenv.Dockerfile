@@ -16,6 +16,9 @@ RUN mkdir -p /gopath/bin
 ENV GOPATH /gopath
 ENV PATH "${PATH}:${GOPATH}/bin:/usr/local/go/bin"
 
+# get golint
+RUN go get -u golang.org/x/lint/golint
+
 RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen en_US.UTF-8
 
