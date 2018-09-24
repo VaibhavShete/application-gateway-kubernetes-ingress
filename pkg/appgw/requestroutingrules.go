@@ -142,7 +142,7 @@ func (builder *appGwConfigBuilder) RequestRoutingRules(ingressList [](*v1beta1.I
 						listenerHTTPID, urlPathMaps[listenerHTTPID],
 						defaultAddressPoolID, defaultHTTPSettingsID)
 				}
-				// need to eliminate non-unqiue paths
+				// need to eliminate non-unique paths
 				urlPathMaps[listenerHTTPID] = builder.pathMaps(ingress, &rule,
 					listenerHTTPID, urlPathMaps[listenerHTTPID],
 					defaultAddressPoolID, defaultHTTPSettingsID)
@@ -155,7 +155,7 @@ func (builder *appGwConfigBuilder) RequestRoutingRules(ingressList [](*v1beta1.I
 						listenerHTTPSID, urlPathMaps[listenerHTTPSID],
 						defaultAddressPoolID, defaultHTTPSettingsID)
 				}
-				// need to eliminate non-unqiue paths
+				// need to eliminate non-unique paths
 				urlPathMaps[listenerHTTPSID] = builder.pathMaps(ingress, &rule,
 					listenerHTTPSID, urlPathMaps[listenerHTTPSID],
 					defaultAddressPoolID, defaultHTTPSettingsID)

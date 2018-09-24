@@ -19,6 +19,11 @@ ENV PATH "${PATH}:${GOPATH}/bin:/usr/local/go/bin"
 # get golint
 RUN go get -u golang.org/x/lint/golint
 
+# configure ginko and gomega
+RUN go get github.com/onsi/ginkgo/ginkgo
+RUN go get github.com/onsi/gomega/...
+
+
 RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen en_US.UTF-8
 
